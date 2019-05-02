@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>String Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>String Generator</h1>
+    <h3>Generate stings using a schema</h3>
+    <p>V = vowel, C = consonant, L = letter (vowel or consonant)<br>
+    For example: CVCCVLL generate a string like HELLOAB.</p>
+    <p>You can also insert favorite letter in a specific position putting it into the schema in lowercase.<br>
+    For example: wVLCd will generate a string like WORLD.</p>
+    <p>You can also insert spaces and special simbols.</p>
+    <p>Please note that the max lenght of the schema is 200 letters.</p>
+  </main>
+      
+  <section>
+    <p>
+      Schema: 
+      <input id="schema" type="text" size="40" maxlength="200" placeholder="For example: wVLCd">
+    </p>
+		<p>
+      Letters to exclude: 
+      <input id="exclude" type="text" size="26" maxlength="24" placeholder="For example: jkwxy">
+    </p>
+		<p>
+      Number of words: 
+      <input id="iterations" type="text" size="3" maxlength="3" value="1">
+    </p>
+		<button onclick="main()">Generate</button>
+    <br><br>
+    <textarea id="result" name="result" readonly="readonly" rows="1" cols="40" style="resize: none; word-wrap: normal; max-width: 90%;">Result</textarea><br>
+  </section>
+  
+  <script async src="string-generator.js"></script>
+  <script async src="donate.js"></script>
+</body>
+</html>

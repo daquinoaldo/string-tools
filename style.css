@@ -1,0 +1,66 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+  local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"),
+  local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+body {
+  font-family: "system", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  margin: 3em auto;
+}
+
+#result {
+  resize: none;
+  word-wrap: normal;
+  max-width: 90%;
+}
+
+/* SLIDER */
+.slider {
+  --size: 1em;
+  --color: #3f3f3f;
+  --background-color: #c0c0c0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: var(--size);
+  width: calc(2*var(--size));
+  vertical-align: middle;
+}
+
+.slider:before {
+  position: absolute;
+  height: var(--size);
+  width: calc(2*var(--size));
+  background: var(--background-color);
+  border-radius: var(--size);
+  content: "";
+}
+
+.slider:after {
+  position: absolute;
+  height: var(--size);
+  width: var(--size);
+  background: var(--color);
+  border-radius: var(--size);
+  transition: ease 0.3s;
+  content: "";
+}
+
+.slider:checked:after {
+  transform: translateX(var(--size));
+}

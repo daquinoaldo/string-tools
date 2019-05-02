@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Random Word Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Random Word Generator</h1>
+    <p>Generate one or more random words, allowing to filter by word length and initial letter or by a schema.</p>
+  </main>
+
+  <section>
+    <h2>Settings</h2>
+    Standard <input type="checkbox" id="useSchema" class="slider" onclick="toggle(this)"> Schema
+
+    <section id="standardMode">
+      Length of the word (empty for random length): <input id="length" type="text" size="3" maxlength="2"/><br>
+      <br>
+      Start with:
+      <select id="start-with">
+        <option value="L">Any letter</option>
+        <option value="C">Consonant</option>
+        <option value="V">Vowel</option>
+      </select>
+    </section>
+
+    <section id="schemaMode" style="display:none">
+      <p>V = vowel, C = consonant, L = letter (vowel or consonant)<br>
+      For example: CVCCVLL generate a string like HELLOAB.<br>
+      Please note that words with some schemas or length may not exist. Try with a different schema if you got an error.</p>
+      Schema: <input id="schema" type="text" size="40" maxlength="200" placeholder="For example: CVLLVLL"><br>
+    </section>
+
+    <br><br>
+    Letters to exclude: <input id="exclude" type="text" size="26" maxlength="24" placeholder="For example: jkwxy"><br>
+    Number of words: <input id="iterations" type="text" size="6" maxlength="5" value="1">
+    <br>
+    <button onclick="generate()">Generate</button>
+    <br><br>
+    Result: <textarea id="result" name="result" readonly="readonly" rows="1" cols="40">Result</textarea><br>
+  <section>
+
+  <script async src="word-picker.js"></script>
+  <script async src="donate.js"></script>
+</body>
+</html>
