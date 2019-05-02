@@ -14,7 +14,7 @@ function main() {
 	const schema = document.getElementById("schema").value
   const iterations = parseInt(document.getElementById("iterations").value)
 	const exclude = document.getElementById("exclude").value.toUpperCase()
-	const text = ""
+	let text = ""
   for (let j = 0; j < iterations; j++) {
     for (let i = 0; i < schema.length; i++) {
       var s = schema.charAt(i)
