@@ -1,25 +1,25 @@
 function getLetter() {
-	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	var alphabet = "abcdefghijklmnopqrstuvwxyz"
 	return alphabet.charAt(Math.floor(Math.random() * alphabet.length))
 }
 function getVowel() {
-	var alphabet = "AEIOU"
+	var alphabet = "aeiou"
 	return alphabet.charAt(Math.floor(Math.random() * alphabet.length))
 }
 function getConsonant() {
-	var alphabet = "BCDFGHJKLMNPQRSTVWXYZ"
+	var alphabet = "bcdfghjklmnpqrstvwxyz"
 	return alphabet.charAt(Math.floor(Math.random() * alphabet.length))
 }
 function main() {
 	const schema = document.getElementById("schema").value
   const iterations = parseInt(document.getElementById("iterations").value)
-	const exclude = document.getElementById("exclude").value.toUpperCase()
+	const exclude = document.getElementById("exclude").value
 	let text = ""
   for (let j = 0; j < iterations; j++) {
     for (let i = 0; i < schema.length; i++) {
       var s = schema.charAt(i)
       // if lowercase is a custom letter
-      if (s === s.toLowerCase()) text += s.toUpperCase()
+      if (s === s.toLowerCase()) text += s
       else {
         var attempts = 1000
         var stop = false
