@@ -30,9 +30,12 @@
 
     <section id="schemaMode" style="display:none">
       <p>V = vowel, C = consonant, L = letter (vowel or consonant)<br>
-      For example: CVCCVLL generate a string like HELLOAB.<br>
-      Please note that words with some schemas or length may not exist. Try with a different schema if you got an error.</p>
-      Schema: <input id="schema" type="text" size="40" maxlength="200" placeholder="For example: CVLLVLL"><br>
+      For example: "CVCLL" generate a words like "hello".<br>
+      You can also specify custom letter, e.g. "hoCV" will generate words like "home".</p>
+      <p>You can add custom characters to the picked word including the between square brackets.<br>
+      For example: "LL[-]CV[.com]" will generate strings like "ho-me.com"</p>
+      <p>Please note that words with some schemas or length may not exist. Try with a different schema if you got an error.</p>
+      Schema: <input id="schema" type="text" size="40" maxlength="200" placeholder="For example: CVLLVLL">
     </section>
 
     <br><br>
